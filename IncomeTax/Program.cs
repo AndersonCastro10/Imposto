@@ -29,9 +29,33 @@ namespace IncomeTax
                     Console.Write("Health expenditures: ");
                     double healthExpenditures = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
+                    list.Add(new Individual(name, anualIncome, healthExpenditures));
+                }
+                else
+                {
+                    Console.Write("Number of employees: ");
+                    int numberOfEmployees = int.Parse(Console.ReadLine());
 
+                    list.Add(new Company(name, anualIncome, numberOfEmployees));
                 }
             }
+
+            Console.WriteLine();
+            Console.WriteLine("TAXES PAID:");
+
+            double sum = 0.0;
+
+            foreach (TaxPayer item in list)
+            {
+                double tax = item.Tax();
+                Console.WriteLine(item.Name + " " + item.Tax().ToString("f2", CultureInfo.InvariantCulture));
+                sum += tax;
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("TOTAL TAXES: " + sum.ToString("F2", CultureInfo.InvariantCulture));
+
+            Console.ReadLine();
         }
     }
 }

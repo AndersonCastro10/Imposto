@@ -48,12 +48,12 @@ namespace IncomeTax
             foreach (TaxPayer item in list)
             {
                 double tax = item.Tax();
-                Console.WriteLine(item.Name + " " + item.Tax().ToString("f2", CultureInfo.InvariantCulture));
+                Console.WriteLine(item.Name + ": $ " + item.Tax().ToString("f2", CultureInfo.InvariantCulture));
                 sum += tax;
             }
 
             Console.WriteLine();
-            Console.WriteLine("TOTAL TAXES: " + sum.ToString("F2", CultureInfo.InvariantCulture));
+            Console.WriteLine("TOTAL TAXES: $ " + sum.ToString("F2", CultureInfo.InvariantCulture));
 
             Console.ReadLine();
         }

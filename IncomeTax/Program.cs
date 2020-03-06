@@ -13,6 +13,7 @@ namespace IncomeTax
 
             Console.Write("Enter the number of tax payers: ");
             int n = int.Parse(Console.ReadLine());
+            Console.WriteLine("alteração no 2");
 
             for (int i = 1; i <= n; i++)
             {

@@ -11,7 +11,8 @@ namespace IncomeTax
         {
             List<TaxPayer> list = new List<TaxPayer>();
 
-            Console.Write("Enter the number of tax payers: ");
+            Console.WriteLine("Alteração no 1");
+            Console.Write("Enter the number of tax payers: lniouhiubuyguyvtgvgty");
             int n = int.Parse(Console.ReadLine());
 
             for (int i = 1; i <= n; i++)
